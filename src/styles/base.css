@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* src/styles/styles.css */
+
+body {
+    cursor: url('/vita_tusek.github.io/prst_2.png') 16 16, auto;
+}
+/* Apply the custom cursor globally */
+* {
+  cursor: url('/vita_tusek.github.io/prst_2.png') 16 16, auto  !important;
+}
+
+/* Optional: Override the cursor for links (and other elements) */
+a {
+  cursor: url('/vita_tusek.github.io/prst_2.png')  16 16, pointer !important;
+}
 @layer base {
   :root,
   html[data-theme="light"] {

@@ -111,5 +111,34 @@ const socialImageURL = new URL(
   </head>
   <body>
     <slot />
+    <script type="module">
+      document.addEventListener("DOMContentLoaded", () => {
+        let cursor = document.createElement("img");
+        cursor.src = "/vita_tusek.github.io/prst_2.png";
+        cursor.style.position = "absolute";
+        cursor.style.pointerEvents = "none"; // Prevent cursor from interfering with clicks
+        cursor.style.width = "32px"; // Initial size
+        cursor.style.height = "32px";
+        document.body.appendChild(cursor);
+
+        // Update the cursor's position based on mouse movement
+        document.addEventListener("mousemove", e => {
+          cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
+          cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
+        });
+
+        // When the user clicks, resize the cursor
+        document.addEventListener("click", () => {
+          cursor.style.width = "16px"; // Smaller size on click
+          cursor.style.height = "16px";
+        });
+
+        // Optionally, reset the cursor size when mouseup (releasing the click)
+        document.addEventListener("mouseup", () => {
+          cursor.style.width = "32px"; // Reset to original size after release
+          cursor.style.height = "32px";
+        });
+      });
+    </script>
   </body>
 </html>
