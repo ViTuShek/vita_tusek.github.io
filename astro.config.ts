@@ -32,9 +32,10 @@ export default defineConfig({
     },
   },
   vite: {
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
+  base: "/vita_tusek.github.io/", // Set the correct base path to match your repository name
+  optimizeDeps: {
+    exclude: ["@resvg/resvg-js"],
   },
+}
   scopedStyleStrategy: "where",
 });
