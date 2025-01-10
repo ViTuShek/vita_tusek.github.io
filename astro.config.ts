@@ -9,6 +9,7 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://Oskar-cmyk.github.io/vita_tusek.github.io", // your lowercase username goes here
+  base: "vita_tusek.github.io",
   output: "static",
   integrations: [
     tailwind({
