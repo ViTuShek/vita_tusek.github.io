@@ -106,19 +106,22 @@ const socialImageURL = new URL(
     }
 
     <ViewTransitions />
-
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
     <slot />
-    <script type="module">
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
-        let cursor = document.createElement("img");
-        cursor.src = "/vita_tusek.github.io/prst_2.png";
+        const cursor = document.createElement("div");
         cursor.style.position = "absolute";
-        cursor.style.pointerEvents = "none"; // Prevent cursor from interfering with clicks
-        cursor.style.width = "32px"; // Initial size
+        cursor.style.width = "32px";
         cursor.style.height = "32px";
+        cursor.style.backgroundImage =
+          "url('/vita_tusek.github.io/prst_2.png')"; // Replace with your cursor image path
+        cursor.style.backgroundSize = "cover";
+        cursor.style.pointerEvents = "none";
+        cursor.style.zIndex = "1000";
+        cursor.style.transition = "width 0.15s ease, height 0.15s ease"; // Add transition for smooth resizing
         document.body.appendChild(cursor);
 
         // Update the cursor's position based on mouse movement
@@ -128,12 +131,12 @@ const socialImageURL = new URL(
         });
 
         // When the user clicks, resize the cursor
-        document.addEventListener("click", () => {
+        document.addEventListener("mousedown", () => {
           cursor.style.width = "16px"; // Smaller size on click
           cursor.style.height = "16px";
         });
 
-        // Optionally, reset the cursor size when mouseup (releasing the click)
+        // Reset the cursor size after a short delay
         document.addEventListener("mouseup", () => {
           cursor.style.width = "32px"; // Reset to original size after release
           cursor.style.height = "32px";

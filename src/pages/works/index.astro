@@ -3,10 +3,11 @@ import { getCollection } from "astro:content";
 import Posts from "@layouts/Posts.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPagination from "@utils/getPagination";
+import GlobalLayout from "@layouts/GlobalLayout.astro";
 
-const posts = await getCollection("blog");
+const works = await getCollection("blog");
 
-const sortedPosts = getSortedPosts(posts);
+const sortedPosts = getSortedPosts(works);
 
 const pagination = getPagination({
   posts: sortedPosts,
@@ -15,4 +16,6 @@ const pagination = getPagination({
 });
 ---
 
-<Posts {...pagination} />
+<GlobalLayout>
+  <Posts {...pagination} />
+</GlobalLayout>
