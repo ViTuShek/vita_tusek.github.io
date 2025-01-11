@@ -1,6 +1,6 @@
 media:
   input: public/images
-  output: /images
+  output: /vita.tusek.github.io/images
 content:
   - name: posts
     label: Posts
@@ -28,5 +28,5 @@ content:
     fields:
       - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
       - { name: title, label: Title, type: string }
-      - { name: body, label: Body, type: rich-text, options: { input: /assets, output: /assets } }  
+      - { name: body, label: Body, type: rich-text} 
 
