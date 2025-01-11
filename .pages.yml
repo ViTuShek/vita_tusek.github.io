@@ -1,5 +1,5 @@
 media:
-  input: public/images
+  input: /
   output: images
 content:
   - name: posts
