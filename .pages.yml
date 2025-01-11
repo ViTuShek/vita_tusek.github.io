@@ -1,6 +1,6 @@
 media:
   input: src/assets/images
-  output: assets/images
+  output: /vita_tusek.github.io/assets
 content:
   - name: posts
     label: Posts
