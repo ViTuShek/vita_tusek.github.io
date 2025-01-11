@@ -4,6 +4,6 @@ title: About
 ---
 Vita Tušek is artist, designer and human based in Ljubljana. there should be image
 
-![](public/IMG_0155.jpeg)
+![](src/assets/images/AstroPaper-v3.png)
 
 ![](/IMG_0155.jpg)
