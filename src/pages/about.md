@@ -4,4 +4,4 @@ title: About
 ---
 Vita Tušek is artist, designer and human based in Ljubljana. there should be image
 
-![](files/Karma%20XPU.png)
+![](public/IMG_0155.jpeg)
