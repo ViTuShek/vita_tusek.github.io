@@ -6,3 +6,4 @@ ogImage: ../IMG_0155.jpeg
 ---
 
 Vita Tušek is artist, designer and human based in Ljubljana.
+there should be image
