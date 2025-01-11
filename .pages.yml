@@ -1,6 +1,6 @@
 media:
   input: public
-  output: /vita_tusek.github.io/
+  output: /
 content:
   - name: posts
     label: Posts
