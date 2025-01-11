@@ -1,5 +1,5 @@
 media:
-  input: public
+  input: 
   output: /vita_tusek.github.io/
 content:
   - name: posts
