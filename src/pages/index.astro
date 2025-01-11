@@ -22,10 +22,10 @@ function getRandomPosition() {
   const left = `${Math.random() * 100}%`;
   return { top, left };
 }
-const posts = await getCollection("blog");
+const works = await getCollection("blog");
 
-const featuredPosts = shuffleArray(posts.filter(post => post.data.featured));
-const recentPosts = shuffleArray(posts.filter(post => !post.data.featured));
+const featuredPosts = shuffleArray(works.filter(post => post.data.featured));
+const recentPosts = shuffleArray(works.filter(post => !post.data.featured));
 
 /* const socialCount = SOCIALS.filter(social => social.active).length;
  */
