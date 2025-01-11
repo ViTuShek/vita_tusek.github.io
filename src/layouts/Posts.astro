@@ -17,14 +17,14 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
-  <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+<Layout title={`Works | ${SITE.title}`}>
+  <Header activeNav="works" />
+  <Main pageTitle="Works" pageDesc="All the works I've posted.">
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
           <Card
-            href={`/vita_tusek.github.io/posts/${slug}/`}
+            href={`/vita_tusek.github.io/works/${slug}/`}
             frontmatter={data}
           />
         ))
@@ -35,8 +35,8 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/vita_tusek.github.io/posts${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/vita_tusek.github.io/posts/${currentPage + 1}/`}
+    prevUrl={`/vita_tusek.github.io/works${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+    nextUrl={`/vita_tusek.github.io/works/${currentPage + 1}/`}
   />
 
   <Footer noMarginTop={totalPages > 1} />

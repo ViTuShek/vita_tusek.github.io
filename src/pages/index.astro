@@ -12,7 +12,7 @@ import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
+  activeNav?: "works" | "tags" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -81,10 +81,10 @@ const recentPosts = shuffleArray(posts.filter(post => !post.data.featured));
             <ul id="menu-items" class="display-none">
               <li>
                 <a
-                  href="/vita_tusek.github.io/posts/"
-                  class={activeNav === "posts" ? "active" : ""}
+                  href="/vita_tusek.github.io/works/"
+                  class={activeNav === "works" ? "active" : ""}
                 >
-                  Posts
+                  Works
                 </a>
               </li>
               <li>
@@ -162,7 +162,7 @@ const recentPosts = shuffleArray(posts.filter(post => !post.data.featured));
                       index < 4 && (
                         <li id={slug} style={{ top, left }}>
                           <Card
-                            href={`/vita_tusek.github.io/posts/${slug}/`}
+                            href={`/vita_tusek.github.io/works/${slug}/`}
                             frontmatter={data}
                           />
                         </li>
@@ -174,7 +174,7 @@ const recentPosts = shuffleArray(posts.filter(post => !post.data.featured));
             )
           }
 
-          <div class="all-posts-btn-wrapper">
+          <!--  <div class="all-posts-btn-wrapper">
             <LinkButton href="/vita_tusek.github.io/posts/">
               All works
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -184,83 +184,84 @@ const recentPosts = shuffleArray(posts.filter(post => !post.data.featured));
               </svg>
             </LinkButton>
           </div>
+        </div> -->
+
+          <Footer />
         </div>
 
-        <Footer />
+        <style>
+          /* ===== Hero Section ===== */
+          #hero {
+            @apply pb-6 pt-8;
+            align-text: center;
+          }
+          #hero h1 {
+            @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+          }
+          #hero .rss-link {
+            @apply mb-6;
+          }
+          #hero .rss-icon {
+            @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+          }
+          #hero p {
+            @apply my-2;
+            align-text: center;
+          }
+          .social-wrapper {
+            @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+          }
+          .social-links {
+            @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+          }
+
+          /* ===== Featured & Recent Posts Sections ===== */
+          #featured,
+          #recent-posts {
+            @apply pb-6 pt-12;
+          }
+          #featured h2,
+          #recent-posts h2 {
+            @apply text-2xl font-semibold tracking-wide;
+          }
+          .all-posts-btn-wrapper {
+            @apply my-8 text-center;
+            z-index: 1000;
+          }
+          .hamburger-menu {
+            @apply self-end p-2 sm:hidden;
+          }
+          .hamburger-menu svg {
+            @apply h-6 w-6 scale-125 fill-skin-base;
+          }
+
+          nav {
+            @apply w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
+          }
+          nav ul {
+            @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
+          }
+          nav ul li {
+            @apply col-span-2 flex items-center justify-center;
+          }
+          nav ul li a Linkbutton {
+            @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
+          }
+          nav ul li:nth-last-child(2) a {
+            @apply w-auto;
+          }
+          nav ul li:nth-last-child(1),
+          nav ul li:nth-last-child(2) {
+            @apply col-span-1;
+          }
+          nav a.active {
+            @apply underline decoration-wavy decoration-2 underline-offset-4;
+          }
+          nav a.active svg {
+            @apply fill-skin-accent;
+          }
+        </style>
       </div>
-
-      <style>
-        /* ===== Hero Section ===== */
-        #hero {
-          @apply pb-6 pt-8;
-          align-text: center;
-        }
-        #hero h1 {
-          @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-        }
-        #hero .rss-link {
-          @apply mb-6;
-        }
-        #hero .rss-icon {
-          @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-        }
-        #hero p {
-          @apply my-2;
-          align-text: center;
-        }
-        .social-wrapper {
-          @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-        }
-        .social-links {
-          @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-        }
-
-        /* ===== Featured & Recent Posts Sections ===== */
-        #featured,
-        #recent-posts {
-          @apply pb-6 pt-12;
-        }
-        #featured h2,
-        #recent-posts h2 {
-          @apply text-2xl font-semibold tracking-wide;
-        }
-        .all-posts-btn-wrapper {
-          @apply my-8 text-center;
-          z-index: 1000;
-        }
-        .hamburger-menu {
-          @apply self-end p-2 sm:hidden;
-        }
-        .hamburger-menu svg {
-          @apply h-6 w-6 scale-125 fill-skin-base;
-        }
-
-        nav {
-          @apply w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
-        }
-        nav ul {
-          @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
-        }
-        nav ul li {
-          @apply col-span-2 flex items-center justify-center;
-        }
-        nav ul li a Linkbutton {
-          @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
-        }
-        nav ul li:nth-last-child(2) a {
-          @apply w-auto;
-        }
-        nav ul li:nth-last-child(1),
-        nav ul li:nth-last-child(2) {
-          @apply col-span-1;
-        }
-        nav a.active {
-          @apply underline decoration-wavy decoration-2 underline-offset-4;
-        }
-        nav a.active svg {
-          @apply fill-skin-accent;
-        }
-      </style>
     </section>
-  </main></Layout
->
+  </main>
+</Layout>

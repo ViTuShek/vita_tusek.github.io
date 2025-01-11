@@ -31,7 +31,7 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
       {
         paginatedPosts.map(({ data, slug }) => (
           <Card
-            href={`/vita_tusek.github.io/posts/${slug}/`}
+            href={`/vita_tusek.github.io/works/${slug}/`}
             frontmatter={data}
           />
         ))
