@@ -110,38 +110,5 @@ const socialImageURL = new URL(
   </head>
   <body>
     <slot />
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const cursor = document.createElement("div");
-        cursor.style.position = "absolute";
-        cursor.style.width = "32px";
-        cursor.style.height = "32px";
-        cursor.style.backgroundImage =
-          "url('/vita_tusek.github.io/prst1.png')"; // Replace with your cursor image path
-        cursor.style.backgroundSize = "cover";
-        cursor.style.pointerEvents = "none";
-        cursor.style.zIndex = "1000";
-        cursor.style.transition = "width 0.15s ease, height 0.15s ease"; // Add transition for smooth resizing
-        document.body.appendChild(cursor);
-
-        // Update the cursor's position based on mouse movement
-        document.addEventListener("mousemove", e => {
-          cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
-          cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
-        });
-
-        // When the user clicks, resize the cursor
-        document.addEventListener("mousedown", () => {
-          cursor.style.width = "16px"; // Smaller size on click
-          cursor.style.height = "16px";
-        });
-
-        // Reset the cursor size after a short delay
-        document.addEventListener("mouseup", () => {
-          cursor.style.width = "32px"; // Reset to original size after release
-          cursor.style.height = "32px";
-        });
-      });
-    </script>
   </body>
 </html>
