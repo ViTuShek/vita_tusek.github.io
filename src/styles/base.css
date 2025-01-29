@@ -62,10 +62,6 @@ a {
     stroke-current stroke-2 opacity-90 group-hover:fill-transparent 
     sm:scale-110;
   }
-  .custom-line-height {
-    line-height: 2em;
-  }
-
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
     prose-h3:italic prose-p:!text-skin-base 
@@ -149,5 +145,8 @@ a {
   }
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
+  }
+  .custom-line-height {
+    line-height: 2em;
   }
 }
