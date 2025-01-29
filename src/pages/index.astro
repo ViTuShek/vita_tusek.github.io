@@ -155,27 +155,6 @@ const recentPosts = shuffleArray(works.filter(post => !post.data.featured));
               }
             </style>
 
-            {
-              recentPosts.length > 0 && (
-                <section id="recent-posts">
-                  <ul>
-                    {recentPosts.map(({ data, slug }, index) => {
-                      const { top, left } = getRandomPosition();
-                      return (
-                        index < 4 && (
-                          <li id={slug} style={{ top, left }}>
-                            <Card
-                              href={`/vita_tusek.github.io/works/${slug}/`}
-                              frontmatter={data}
-                            />
-                          </li>
-                        )
-                      );
-                    })}
-                  </ul>
-                </section>
-              )
-            }
 
             <!--  <div class="all-posts-btn-wrapper">
             <LinkButton href="/vita_tusek.github.io/posts/">
