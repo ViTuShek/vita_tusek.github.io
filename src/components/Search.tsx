@@ -112,7 +112,7 @@ export default function SearchBar({ searchList }: Props) {
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
             <Card
-              href={`/vita_tusek.github.io/posts/${item.slug}/`}
+              href={`/vita_tusek.github.io/works/${item.slug}/`}
               frontmatter={item.data}
               key={`${refIndex}-${item.slug}`}
             />
