@@ -5,16 +5,16 @@
 /* src/styles/styles.css */
 
 body {
-    cursor: url('/vita_tusek.github.io/prst_2.png') 16 0, auto;
+    cursor: url('/vita_tusek.github.io/prst1.png') 16 0, auto;
 }
 /* Apply the custom cursor globally */
 * {
-  cursor: url('/vita_tusek.github.io/prst_2.png') 16 0, auto  !important;
+  cursor: url('/vita_tusek.github.io/prst1.png') 16 0, auto  !important;
 }
 
 /* Optional: Override the cursor for links (and other elements) */
 a {
-  cursor: url('/vita_tusek.github.io/prst_2.png')  16 0, pointer !important;
+  cursor: url('/vita_tusek.github.io/prst1.png')  16 0, pointer !important;
 }
 @layer base {
   :root,
