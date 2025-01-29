@@ -19,15 +19,9 @@ a {
 @layer base {
   :root,
   html[data-theme="light"] {
-<<<<<<< HEAD
-    --color-fill: blue;
-    --color-text-base: 255, 255, 255;
-    --color-accent: 8, 0, 255;
-=======
-    --color-fill: 5, 30, 1;
+    --color-fill: 0, 0, 255;
     --color-text-base: 255, 255, 255;
     --color-accent: 255, 255, 255;
->>>>>>> 62dc31db4aea3862cca38557690f123775e9c5d8
     --color-card: 230, 230, 230;
     --color-card-muted: 205, 205, 205;
     --color-border: 236, 233, 233;
