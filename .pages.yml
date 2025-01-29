@@ -1,6 +1,6 @@
 media:
   input: public/images
-  output: https://ViTuShek.github.io/vita_tusek.github.io/images
+  output: https://ViTuShek.github.io/vita_tusek.github.io/images/
 content:
   - name: works
     label: Works
