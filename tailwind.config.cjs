@@ -18,6 +18,11 @@ module.exports = {
     },
 
     extend: {
+      cursor: {
+        default: 'url(/vita_tusek.github.io/prst_1.png), default',
+        pointer: 'url(/vita_tusek.github.io/prst3.png), pointer',
+      },
+
       textColor: {
         skin: {
           base: withOpacity("--color-text-base"),
