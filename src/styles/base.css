@@ -7,8 +7,9 @@
 *,
 *:before,
 *:after {
-  @apply 'url(https://vitushek.github.io/vita_tusek.github.io/prste1.png), default',
+  @apply cursor-default;
 }
+
 @layer base {
   :root,
   html[data-theme="light"] {
@@ -38,6 +39,7 @@
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
+    @apply cursor-default
   }
   section,
   footer {
