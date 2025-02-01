@@ -7,7 +7,7 @@
 *,
 *:before,
 *:after {
-  @apply cursor-default;
+  @apply 'url(https://vitushek.github.io/vita_tusek.github.io/prste1.png), default',
 }
 @layer base {
   :root,
