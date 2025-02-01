@@ -19,7 +19,7 @@ module.exports = {
 
     extend: {
       cursor: {
-        default: 'url(https://play.tailwindcss.com/favicons/favicon-16x16.png?v=3), default',
+        default: 'url(https://vitushek.github.io/vita_tusek.github.io/prste1_s.png), default',
         pointer: 'url(/vita_tusek.github.io/prst3.png), pointer',
       },
 
