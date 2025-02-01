@@ -19,7 +19,7 @@ module.exports = {
 
     extend: {
       cursor: {
-        default: 'url(/vita_tusek.github.io/prst_1.png), default',
+        default: 'url(https://vitushek.github.io/vita_tusek.github.io/prste1.png), default',
         pointer: 'url(/vita_tusek.github.io/prst3.png), pointer',
       },
 
